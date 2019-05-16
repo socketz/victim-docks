@@ -1,21 +1,27 @@
 version: '2'
 services:
   apache1:
-    build: ./apache1
+    build:
+      context: .
+      dockerfile: Dockerfile.apache1
     image: apache:apache1
     container_name: apache1
     ports:
       - 8101:80
 
   apache2:
-    build: ./apache2
+    build:
+      context: .
+      dockerfile: Dockerfile.apache2
     image: apache:apache2
     container_name: apache2
     ports:
       - 8102:80
 
   apache3:
-    build: ./apache3
+    build:
+      context: .
+      dockerfile: Dockerfile.apache3
     image: apache:apache3
     container_name: apache3
     ports:
@@ -26,7 +32,9 @@ services:
     - /scripts/iptables_rules.sh
 
   apache4:
-    build: ./apache4
+    build:
+      context: .
+      dockerfile: Dockerfile.apache4
     image: apache:apache4
     container_name: apache4
     ports:
