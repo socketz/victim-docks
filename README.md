@@ -1,4 +1,4 @@
-# Web Env
+# Victim Docks
 
 ## apache1
 - Apache 2.4 -> port 8101
@@ -13,9 +13,7 @@
 - Apache 2.4 + mod_security + iptables -> port 8104
 
 
-Para un correcto funcionamiento, habilitar en la VM o host los puertos 8101-8104 TCP.
-
-Ejecutar en la raíz del proyecto:
+### Up & run with:
 ```
-docker-compose up -d
+docker-compose up -d --build
 ```
